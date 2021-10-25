@@ -1,12 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.scss";
+import Nav from "./components/Nav";
 
 function App() {
-  return (
-    <div className="App">
-     <h1>test1 deploy1</h1>
-    </div>
-  );
+     return (
+          <div className="App-container">
+               <Nav />
+          </div>
+     );
 }
 
 export default App;

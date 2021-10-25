@@ -1,0 +1,50 @@
+.App-container {
+     border: 2px solid blue;
+}
+
+.nav-container {
+     background-color: rgb(240, 182, 182);
+     display: flex;
+}
+.nav-container {
+     .left {
+     }
+}
+.nav-container {
+     .right {
+     }
+}
+.nav-container {
+     .right {
+          .cart-icon-wrap {
+          }
+     }
+}
+.nav-container {
+     .cart-icon-wrap {
+          position: relative;
+          // icon
+          .cart-container {
+               position: absolute;
+               border: 2px solid red;
+               top: 110%;
+               left: 0;
+               right: 0;
+
+               width: 90vw;
+               margin: 0 auto;
+               padding: 10px;
+               @media screen and (min-width: 600px) {
+                    width: 500px;
+                    margin: unset;
+               }
+          }
+     }
+}
+.nav-container {
+     .right {
+          img {
+               width: 30px;
+          }
+     }
+}
