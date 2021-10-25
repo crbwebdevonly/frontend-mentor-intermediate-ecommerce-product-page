@@ -1,0 +1,85 @@
+//======================================================
+// description-container
+//======================================================
+.description-container {
+     padding: 20px;
+}
+
+.description-container {
+     .desktop-picture-wrap {
+          display: none;
+          height: 300px;
+          width: 300px;
+          background-color: red;
+          @media screen and (min-width: 600px) {
+               display: flex;
+          }
+     }
+}
+
+.description-container {
+     .desc-wrap {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+
+          .sub-title {
+               text-transform: uppercase;
+               font-weight: 700;
+               font-size: 0.7rem;
+               color: var(--orange);
+          }
+          .title {
+               font-weight: 700;
+               font-size: 1.6rem;
+               // margin: 10px 0;
+          }
+          .desc {
+               font-size: 0.9rem;
+               color: var(--grayish-blue);
+          }
+     }
+}
+
+.description-container {
+     .desc-wrap {
+          .price-wrap {
+               display: flex;
+               justify-content: space-between;
+               align-items: center;
+               .price {
+                    font-size: 1.5rem;
+                    font-weight: 700;
+               }
+               .discount {
+                    padding: 5px;
+                    background-color: var(--pale-orange);
+                    color: var(--orange);
+                    border-radius: 5px;
+                    margin-right: auto;
+                    margin-left: 20px;
+                    font-weight: 700;
+                    font-size: 0.8rem;
+               }
+               .prev-price {
+                    color: var(--grayish-blue);
+                    text-decoration: line-through;
+               }
+          }
+     }
+}
+
+.description-container {
+     .desc-wrap {
+          .buttons-wrap {
+               .qty-wrap {
+               }
+               .add-cart {
+                    .cart-icon {
+                    }
+                    .text {
+                    }
+               }
+          }
+     }
+}

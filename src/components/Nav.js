@@ -18,7 +18,7 @@ const Nav = () => {
      //======================================================
      const [showCart, setShowCart] = useState(false);
      const [showMenu, setShowMenu] = useState(false);
-     const [showMobileMenuList, setShowMobileMenuList] = useState(true);
+     const [showMobileMenuList, setShowMobileMenuList] = useState(false);
      //======================================================
      //======================================================
      console.log(cart);
@@ -33,7 +33,7 @@ const Nav = () => {
                          alt=""
                          className="menu-bars"
                          onClick={() => {
-                              setShowMenu(true);
+                              setShowMobileMenuList(true);
                          }}
                     />
                     <img src={logoImg} alt="" />
@@ -47,7 +47,12 @@ const Nav = () => {
                     {showMobileMenuList && (
                          <>
                               <ul className="mobile-menu-list">
-                                   <li className="close">
+                                   <li
+                                        className="close"
+                                        onClick={() => {
+                                             setShowMobileMenuList(false);
+                                        }}
+                                   >
                                         <img src={closeIcon} alt="" />
                                    </li>
                                    <li>Collections</li>
@@ -71,7 +76,7 @@ const Nav = () => {
                          <img src={cartIcon} alt="" />
                          {showCart && <Cart />}
                     </div>
-                    <img src={avatarImg} alt="" />
+                    <img src={avatarImg} alt="" className="avatar"/>
                </div>
           </div>
      );
