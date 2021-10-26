@@ -4,19 +4,34 @@ import IconMinus from "../images/icon-minus.svg";
 import IconPlus from "../images/icon-plus.svg";
 import IconCart from "../images/icon-cart.svg";
 import DesktopPicture from "./DesktopPicture";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../redux/cartSlice";
 const Description = () => {
      //======================================================
+     const dispatch = useDispatch()
+     //======================================================
+     const product = {
+          title: "Fall Limited Edition Sneakers",
+          price:125.00
+     };
      //======================================================
      const [prodQty, setProdQty] = useState(0);
      //======================================================
      // console.log(IconCart);
+     const handleAddToCart = () => {
+          const basketItem = {
+               ...product, prodQty
+          }
+          dispatch(addToCart(basketItem))
+
+     };
      //======================================================
      return (
           <div className="description-container">
                <DesktopPicture />
                <div className="desc-wrap">
                     <div className="sub-title">Sneaker Company</div>
-                    <div className="title">Fall Limited Edition Sneakers</div>
+                    <div className="title">{product.title}</div>
                     <div className="desc">
                          These low-profile sneakers are your perfect casual wear
                          companion. Featuring a durable rubber outer sole,
@@ -24,7 +39,7 @@ const Description = () => {
                     </div>
                     <div className="price-wrap">
                          <div className="price">
-                              $125.00 <span className="discount">50%</span>
+                              ${product.price} <span className="discount">50%</span>
                          </div>
 
                          <div className="prev-price">$250.00</div>
@@ -47,7 +62,7 @@ const Description = () => {
                                    }}
                               />
                          </div>
-                         <div className="add-cart">
+                         <div className="add-cart" onClick={handleAddToCart}>
                               {/* <div className="cart-icon"></div> */}
                               <img src={IconCart} alt="" />
                               <div className="text">Add to cart</div>

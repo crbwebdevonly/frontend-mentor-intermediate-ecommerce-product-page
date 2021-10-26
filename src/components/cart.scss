@@ -78,6 +78,7 @@
                width: 20px;
                cursor: pointer;
                transition: all 0.3s ease-in-out;
+               z-index: 999;
                &:hover {
                     transform: scale(1.2);
                     // transform: translateX(5px);

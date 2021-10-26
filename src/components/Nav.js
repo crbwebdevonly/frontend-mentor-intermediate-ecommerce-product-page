@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
-import { addToCart } from "../redux/cartSlice";
+import {
+     addToCart,
+     toggleShowCart,
+     toggleShowMobileMenu,
+} from "../redux/cartSlice";
 import Cart from "./Cart";
 import cartIcon from "../images/icon-cart.svg";
 import menuIcon from "../images/icon-menu.svg";
@@ -11,8 +15,11 @@ import avatarImg from "../images/image-avatar.png";
 
 const Nav = () => {
      //======================================================
-     const cart = useSelector((state) => state.cart);
+     const { cartItems, showCart, showMobileMenu } = useSelector(
+          (state) => state.cart
+     );
      const dispatch = useDispatch();
+     // console.log(cart);
      //======================================================
      const [screenWidth, setScreenWidth] = useState(1000);
      // const { innerWidth } = window;
@@ -32,9 +39,9 @@ const Nav = () => {
      //======================================================
 
      //======================================================
-     const [showCart, setShowCart] = useState(false);
-     const [showMenu, setShowMenu] = useState(false);
-     const [showMobileMenuList, setShowMobileMenuList] = useState(false);
+     // const [showCart, setShowCart] = useState(false);
+     // const [showMenu, setShowMenu] = useState(false);
+     // const [showMobileMenuList, setShowMobileMenuList] = useState(false);
      //======================================================
      //======================================================
      // console.log(screenWidth);
@@ -49,7 +56,8 @@ const Nav = () => {
                          alt=""
                          className="menu-bars"
                          onClick={() => {
-                              setShowMobileMenuList(true);
+                              // setShowMobileMenuList(true);
+                              dispatch(toggleShowMobileMenu());
                          }}
                     />
                     <img src={logoImg} alt="" />
@@ -60,13 +68,13 @@ const Nav = () => {
                          <li>About</li>
                          <li>Contact</li>
                     </ul>
-                    {showMobileMenuList && screenWidth < 600 && (
+                    {showMobileMenu && screenWidth < 600 && (
                          <>
                               <ul className="mobile-menu-list">
                                    <li
                                         className="close"
                                         onClick={() => {
-                                             setShowMobileMenuList(false);
+                                             dispatch(toggleShowMobileMenu());
                                         }}
                                    >
                                         <img src={closeIcon} alt="" />
@@ -85,8 +93,8 @@ const Nav = () => {
                     <div
                          className="cart-icon-wrap"
                          onClick={() => {
-                              dispatch(addToCart("cart"));
-                              setShowCart(!showCart);
+                              // dispatch(addToCart("cart"));
+                              dispatch(toggleShowCart());
                          }}
                     >
                          <div className="item-qty">5</div>
