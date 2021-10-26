@@ -21,6 +21,7 @@
 */
 :root {
      --orange: hsl(26, 100%, 55%);
+     --orange2: hsl(26, 100%, 75%);
      --pale-orange: hsl(25, 100%, 94%);
 
      --very-dark-blue: hsl(220, 13%, 13%);
@@ -42,9 +43,9 @@ body {
 }
 
 .App-container {
-     //  border: 2px solid blue;
+     border: 2px solid blue;
      @media screen and (min-width: 500px) {
-          padding: 50px;
+          // padding: 50px;
      }
 }
 
@@ -55,7 +56,7 @@ body {
      display: flex;
      justify-content: space-between;
      align-items: center;
-     min-width: 250px;
+     // min-width: 250px;
      @media screen and (min-width: 500px) {
           border-bottom: 1px solid rgba(128, 128, 128, 0.438);
      }
@@ -205,9 +206,10 @@ body {
      .right {
           .cart-icon-wrap {
                width: 20px;
-               cursor: pointer;
+               // cursor: pointer;
                img {
                     width: 100%;
+                    cursor: pointer;
                }
                transition: all 0.4s ease;
                &:hover {
@@ -220,22 +222,6 @@ body {
      .cart-icon-wrap {
           // position: relative;
           // icon
-          .cart-container {
-               position: absolute;
-               border: 2px solid red;
-               top: 60px;
-               right: 10px;
-               //  right: 0;
-
-               width: 90vw;
-               min-width: 250px;
-               margin: 0 auto;
-               padding: 10px;
-               @media screen and (min-width: 600px) {
-                    width: 500px;
-                    margin: unset;
-               }
-          }
      }
 }
 .nav-container {
@@ -285,10 +271,11 @@ body {
 
 .slider-container {
      //  border: 1px solid blue;
-     height: 300px;
+     min-height: 200px;
      width: 100vw;
      position: relative;
      overflow: hidden;
+     max-height: 450px;
 }
 
 .slider-container {
@@ -337,8 +324,8 @@ body {
      .slide-track {
           //replace with styleddiv1
           width: 400%;
-          // height: 100%;
-          height: 290px;
+          height: 100%;
+          // height: 290px;
           // border: 1px solid green;
           display: flex;
           transform: translateX(-180vw);

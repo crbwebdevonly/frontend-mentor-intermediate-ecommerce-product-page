@@ -1,6 +1,14 @@
-import React from "react";
-import "./description.scss"
+import React, { useState } from "react";
+import "./description.scss";
+import IconMinus from "../images/icon-minus.svg";
+import IconPlus from "../images/icon-plus.svg";
+import IconCart from "../images/icon-cart.svg";
 const Description = () => {
+     //======================================================
+     //======================================================
+     const [prodQty, setProdQty] = useState(0);
+     //======================================================
+     //======================================================
      return (
           <div className="description-container">
                <div className="desktop-picture-wrap">desktop-picture-wrap</div>
@@ -18,9 +26,14 @@ const Description = () => {
                          <div className="prev-price">$250.00</div>
                     </div>
                     <div className="buttons-wrap">
-                         <div className="qty-wrap"></div>
+                         <div className="qty-wrap">
+                              <img src={IconMinus} alt="" />
+                              <div className="qty">{prodQty}</div>
+                              <img src={IconPlus} alt="" />
+                         </div>
                          <div className="add-cart">
-                              <div className="cart-icon"></div>
+                              {/* <div className="cart-icon"></div> */}
+                              <img src={IconCart} alt="" />
                               <div className="text">Add to cart</div>
                          </div>
                     </div>

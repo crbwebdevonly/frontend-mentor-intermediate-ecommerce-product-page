@@ -1,0 +1,104 @@
+.cart-container {
+     position: absolute;
+     // border: 2px solid red;
+     background-color: white;
+     border-radius: 10px;
+     top: 60px;
+     right: 10px;
+     //  right: 0;
+
+     width: 90vw;
+     min-width: 250px;
+     max-width: 400px;
+     margin: 0 auto;
+     padding: 10px;
+     z-index: 999;
+     @media screen and (min-width: 600px) {
+          width: 500px;
+          margin: unset;
+     }
+
+     //======================================================
+     .title {
+          font-weight: 700;
+          padding: 10px;
+     }
+     //======================================================
+     .empty {
+          color: grey;
+          padding: 50px;
+          display: grid;
+          place-content: center;
+          min-width: 250px;
+     }
+     //======================================================
+     .item-wrap {
+          padding: 10px;
+          display: flex;
+          justify-content: space-between;
+          gap: 10px;
+          align-items: center;
+          border-bottom: 2px solid grey;
+          margin-bottom: 10px;
+          .thumb-wrap {
+               width: 40px;
+               // height: 40px;
+
+               border-radius: 5px;
+               overflow: hidden;
+               img {
+                    width: 100%;
+                    object-fit: contain;
+               }
+          }
+          .info-wrap {
+               display: flex;
+               flex-direction: column;
+               justify-content: start;
+               align-items: start;
+               .name {
+                    font-size: 0.8rem;
+                    font-weight: 700;
+                    color: var(--grayish-blue);
+                    min-width: 200px;
+               }
+               .qty-price {
+                    font-size: 0.9rem;
+                    font-weight: 400;
+                    color: var(--grayish-blue);
+                    span {
+                         color: black;
+                         font-weight: 700;
+                         margin-left: 5px;
+                    }
+               }
+          }
+          .delete-icon {
+               width: 20px;
+               cursor: pointer;
+               transition: all 0.3s ease-in-out;
+               &:hover {
+                    transform: scale(1.2);
+                    // transform: translateX(5px);
+               }
+          }
+     }
+     //======================================================
+
+     .checkout {
+          margin: 20px 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 15px;
+          padding: 15px;
+          background-color: var(--orange);
+          color: white;
+          font-weight: 700;
+          border-radius: 10px;
+          cursor: pointer;
+          &:hover {
+               background-color: var(--orange2);
+          }
+     }
+}
