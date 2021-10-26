@@ -8,22 +8,24 @@ import { useDispatch } from "react-redux";
 import { addToCart } from "../redux/cartSlice";
 const Description = () => {
      //======================================================
-     const dispatch = useDispatch()
+     const dispatch = useDispatch();
      //======================================================
      const product = {
           title: "Fall Limited Edition Sneakers",
-          price:125.00
+          price: 125.0,
      };
      //======================================================
-     const [prodQty, setProdQty] = useState(0);
+     const [prodQty, setProdQty] = useState(1);
      //======================================================
      // console.log(IconCart);
      const handleAddToCart = () => {
-          const basketItem = {
-               ...product, prodQty
+          if (prodQty > 0) {
+               const basketItem = {
+                    ...product,
+                    prodQty,
+               };
+               dispatch(addToCart(basketItem));
           }
-          dispatch(addToCart(basketItem))
-
      };
      //======================================================
      return (
@@ -39,7 +41,8 @@ const Description = () => {
                     </div>
                     <div className="price-wrap">
                          <div className="price">
-                              ${product.price} <span className="discount">50%</span>
+                              ${product.price}{" "}
+                              <span className="discount">50%</span>
                          </div>
 
                          <div className="prev-price">$250.00</div>

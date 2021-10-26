@@ -108,7 +108,9 @@ const Nav = () => {
                               dispatch(toggleShowCart());
                          }}
                     >
-                         <div className="item-qty">{totalItems}</div>
+                         {totalItems > 0 && (
+                              <div className="item-qty">{totalItems}</div>
+                         )}
                          <img src={cartIcon} alt="" />
                          {showCart && <Cart />}
                     </div>
