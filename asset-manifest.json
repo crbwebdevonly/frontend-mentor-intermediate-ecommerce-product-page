@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/ecommerce-product-page/static/css/main.91db56a0.chunk.css",
-    "main.js": "/ecommerce-product-page/static/js/main.4fec5ab9.chunk.js",
-    "main.js.map": "/ecommerce-product-page/static/js/main.4fec5ab9.chunk.js.map",
-    "runtime-main.js": "/ecommerce-product-page/static/js/runtime-main.0d4b30ba.js",
-    "runtime-main.js.map": "/ecommerce-product-page/static/js/runtime-main.0d4b30ba.js.map",
+    "main.css": "/ecommerce-product-page/static/css/main.a6347328.chunk.css",
+    "main.js": "/ecommerce-product-page/static/js/main.58f40629.chunk.js",
+    "main.js.map": "/ecommerce-product-page/static/js/main.58f40629.chunk.js.map",
+    "runtime-main.js": "/ecommerce-product-page/static/js/runtime-main.aaf1129d.js",
+    "runtime-main.js.map": "/ecommerce-product-page/static/js/runtime-main.aaf1129d.js.map",
     "static/js/2.90a864b4.chunk.js": "/ecommerce-product-page/static/js/2.90a864b4.chunk.js",
     "static/js/2.90a864b4.chunk.js.map": "/ecommerce-product-page/static/js/2.90a864b4.chunk.js.map",
-    "static/js/3.505b5ad4.chunk.js": "/ecommerce-product-page/static/js/3.505b5ad4.chunk.js",
-    "static/js/3.505b5ad4.chunk.js.map": "/ecommerce-product-page/static/js/3.505b5ad4.chunk.js.map",
+    "static/js/3.d3f44607.chunk.js": "/ecommerce-product-page/static/js/3.d3f44607.chunk.js",
+    "static/js/3.d3f44607.chunk.js.map": "/ecommerce-product-page/static/js/3.d3f44607.chunk.js.map",
     "index.html": "/ecommerce-product-page/index.html",
-    "static/css/main.91db56a0.chunk.css.map": "/ecommerce-product-page/static/css/main.91db56a0.chunk.css.map",
+    "static/css/main.a6347328.chunk.css.map": "/ecommerce-product-page/static/css/main.a6347328.chunk.css.map",
     "static/js/2.90a864b4.chunk.js.LICENSE.txt": "/ecommerce-product-page/static/js/2.90a864b4.chunk.js.LICENSE.txt",
     "static/media/icon-cart.539ec608.svg": "/ecommerce-product-page/static/media/icon-cart.539ec608.svg",
     "static/media/icon-close.c3904486.svg": "/ecommerce-product-page/static/media/icon-close.c3904486.svg",
@@ -28,9 +28,9 @@
     "static/media/logo.6ce24c58.svg": "/ecommerce-product-page/static/media/logo.6ce24c58.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.0d4b30ba.js",
+    "static/js/runtime-main.aaf1129d.js",
     "static/js/2.90a864b4.chunk.js",
-    "static/css/main.91db56a0.chunk.css",
-    "static/js/main.4fec5ab9.chunk.js"
+    "static/css/main.a6347328.chunk.css",
+    "static/js/main.58f40629.chunk.js"
   ]
 }
