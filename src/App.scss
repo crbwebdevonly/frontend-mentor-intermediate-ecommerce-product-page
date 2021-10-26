@@ -46,7 +46,12 @@ body {
      // border: 2px solid blue;
      max-width: 1100px;
      position: relative;
+     margin-left: auto;
+     margin-right: auto;
      @media screen and (min-width: 500px) {
+          padding: 50px;
+     }
+     @media screen and (min-width: 900px) {
           // padding: 50px;
      }
 }
@@ -142,7 +147,7 @@ body {
                height: 100vh;
                top: 10px;
                left: 10px;
-               z-index: 99;
+               z-index: 99999;
                display: flex;
                gap: 5px;
                flex-direction: column;
