@@ -44,6 +44,8 @@ body {
 
 .App-container {
      border: 2px solid blue;
+     max-width: 1100px;
+     position: relative;
      @media screen and (min-width: 500px) {
           // padding: 50px;
      }
@@ -220,8 +222,24 @@ body {
 }
 .nav-container {
      .cart-icon-wrap {
-          // position: relative;
+          position: relative;
           // icon
+          // border: 2px solid blue;
+          .item-qty {
+               position: absolute;
+               padding: 1px 7px;
+               // width: 30px;
+               // height: 20px;
+               top: -7px;
+               right: -10px;
+               background-color: var(--orange);
+               border-radius: 10px;
+               font-size: 0.7rem;
+               font-weight: 700;
+               color: white;
+               display: grid;
+               place-content: center;
+          }
      }
 }
 .nav-container {
@@ -276,6 +294,9 @@ body {
      position: relative;
      overflow: hidden;
      max-height: 450px;
+     @media screen and (min-width: 600px) {
+          display: none;
+     }
 }
 
 .slider-container {

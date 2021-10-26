@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { addToCart } from "../redux/cartSlice";
@@ -14,6 +14,22 @@ const Nav = () => {
      const cart = useSelector((state) => state.cart);
      const dispatch = useDispatch();
      //======================================================
+     const [screenWidth, setScreenWidth] = useState(1000);
+     // const { innerWidth } = window;
+
+     useEffect(() => {
+          // effect
+          const handlResize = () => {
+               setScreenWidth(window.innerWidth);
+          };
+          window.addEventListener("resize", handlResize);
+
+          return () => {
+               // cleanup
+               window.removeEventListener("resize", handlResize);
+          };
+     }, []);
+     //======================================================
 
      //======================================================
      const [showCart, setShowCart] = useState(false);
@@ -21,7 +37,7 @@ const Nav = () => {
      const [showMobileMenuList, setShowMobileMenuList] = useState(false);
      //======================================================
      //======================================================
-     console.log(cart);
+     // console.log(screenWidth);
      //======================================================
      //======================================================
      //======================================================
@@ -44,7 +60,7 @@ const Nav = () => {
                          <li>About</li>
                          <li>Contact</li>
                     </ul>
-                    {showMobileMenuList && (
+                    {showMobileMenuList && screenWidth < 600 && (
                          <>
                               <ul className="mobile-menu-list">
                                    <li
@@ -73,10 +89,11 @@ const Nav = () => {
                               setShowCart(!showCart);
                          }}
                     >
+                         <div className="item-qty">5</div>
                          <img src={cartIcon} alt="" />
                          {showCart && <Cart />}
                     </div>
-                    <img src={avatarImg} alt="" className="avatar"/>
+                    <img src={avatarImg} alt="" className="avatar" />
                </div>
           </div>
      );
