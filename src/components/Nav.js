@@ -37,6 +37,17 @@ const Nav = () => {
           };
      }, []);
      //======================================================
+     const [totalItems, setTotalItems] = useState(0);
+     useEffect(() => {
+          // effect
+          setTotalItems(0);
+          cartItems.forEach((e) => {
+               setTotalItems((p) => p + e.prodQty);
+          });
+          return () => {
+               // cleanup
+          };
+     }, [cartItems]);
 
      //======================================================
      // const [showCart, setShowCart] = useState(false);
@@ -97,7 +108,7 @@ const Nav = () => {
                               dispatch(toggleShowCart());
                          }}
                     >
-                         <div className="item-qty">5</div>
+                         <div className="item-qty">{totalItems}</div>
                          <img src={cartIcon} alt="" />
                          {showCart && <Cart />}
                     </div>
